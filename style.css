@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: black;
+    color: #fff;
+}
+
+/* Head Section */
+
+#header {
+    height: 100vh;
+    width: 100%;
+    background-image: url(picture/ordi.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+/* I put space between  nav element */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    /* width: 100px; */
+    color: white;
+    font-size: 40px;
+}
+
+.logo span {
+    color: gold;
+    font-size: 45px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 30px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+/* I creat the line belond the links */
+nav ul li a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: gold;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.7s;
+}
+
+/* I made the line visible when i hover the links  */
+nav ul li a:hover::after {
+    width: 100%;
+
+}
+
+.text-header {
+    margin-top: 20%;
+    font-size: 30px;
+    color: gold;
+}
+
+.text-header h1 {
+    font-size: 50px;
+}
+
+/* .text-header h1 span {
+    color: gold;
+} */
+
+.text-header p {
+    margin-top: 20px;
+    font-size: 35px;
+    font-style: italic;
+    font-weight: 800;
+}
+
+/* About Section */
+
+#about {
+    padding: 80px 0;
+    color: gray;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.leftSide {
+    flex-basis: 35%;
+
+}
+
+.leftSide img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.rightSide {
+    flex-basis: 60%;
+}
+
+.rightSide p {
+    margin-top: 15px;
+    font-size: 1.3rem;
+}
+
+.sousTitre {
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+}
+
+.skills-section {
+    display: flex;
+    margin: 20px 0 40px;
+    justify-content: space-around;
+}
+
+.education {
+    margin-top: 5px;
+}
+
+.sub-title {
+    font-size: 23px;
+    font-weight: 500;
+    position: relative;
+}
+
+.sub-title::after {
+    content: " ";
+    width: 80%;
+    height: 3px;
+    background: gold;
+    left: 0;
+    bottom: -6px;
+    position: absolute;
+}
+
+.education-content ul {
+    margin-top: 25px;
+}
+
+.education-content ul li {
+    margin-top: 17px;
+}
+
+.education-content ul span {
+    color: gold;
+}
+
+/* Project section */
+
+
+#titleProject {
+    text-align: center;
+}
+
+#project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+.projet {
+    width: 400px;
+    margin: 30px;
+    display: inline-block;
+    background: white;
+    padding-bottom: 15px;
+    border: 0px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
+}
+
+/* .projet:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: 0.3s;
+} */
+
+/* .projet>a {
+    text-align: center;
+    font-size: 17px;
+    text-decoration: none;
+    color: black;
+} */
+
+.picture img {
+    min-width: 400px;
+    height: 260px;
+}
+
+.projet span {
+    text-transform: uppercase;
+    display: block;
+    color: black;
+    text-align: center;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.projet>p {
+    color: black;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 17px;
+}
+
+.picture .date-project {
+    font-size: 0.7em;
+    color: black;
+    text-align: center;
+}
+
+.picture {
+    width: 400px;
+    height: 266px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+/* Contact section */
+#contact {
+    margin-top: 40px;
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: gray;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.icon-social {
+    margin-top: 30px
+}
+
+.icon-social a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: gray;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.icon-social a:hover {
+    transform: translateY(-5px);
+}
+
+/* Here i customize the cv button */
+.resume {
+    display: inline-block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid gray;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    background-color: gray;
+    transition: transform 0.3s;
+}
+
+.resume:hover {
+    background-color: gold;
+    color: gray;
+    transform: translateY(-5px);
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+/* i cutomize the inputs and the textarea champ in the same time */
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    padding: 15px;
+    background: #262626;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+
+}
+
+form #submit {
+    margin-top: 15px;
+    padding: 10px 60px;
+    color: white;
+    font-size: 18px;
+    background-color: gray;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: gray;
+}
+
+.footer {
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background: #262626;
+    margin-top: 50px;
+    font-style: italic;
+    font-size: 20px;
+}
+
+
+/* Buttons project */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.btn-project {
+    padding: 10px 30px;
+    margin: 18px 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: transform 0.3s;
+}
+
+.btn-project:hover {
+    transform: translateY(-5px);
+}
+
+/* Media queries */
+
+nav .fa-solid {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background-color: gray;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 125px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.7s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .leftSide img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .rightSide h1 {
+        margin-top: 35px;
+    }
+
+    .education {
+        margin: 25px 30px;
+    }
+
+    .contact-right form {
+        margin-left: 5px;
+    }
+
+}
